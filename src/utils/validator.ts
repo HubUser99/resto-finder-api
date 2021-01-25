@@ -1,7 +1,8 @@
 import { Request } from "express";
 
 export const validateDiscoveryParams = (req: Request) => {
-    const { lat, lon } = req.query;
+    const lat = req.query.lat;
+    const lon = req.query.lon;
 
     if (!lat || !lon || typeof lat !== "string" || typeof lon !== "string") {
         return;
