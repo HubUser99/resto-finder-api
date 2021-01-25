@@ -22,3 +22,25 @@ Contains entries sorted by `launch_date` in descending order and requires `launc
 ### Nearby Restaurants
 
 Contains restaurants sorted by the distance to the provided coordinates in ascending order.
+
+## Project structure
+
+Url to the external API and caching interval value are is located in [.env](.env) file.
+
+Most of the source files are located in the [src](./src) directory.
+
+- [src/comm](./src/comm) contains code for fetching restaurants data from the [Wolt official GitHub](https://raw.githubusercontent.com/woltapp/summer2021-internship/main/restaurants.json).
+- [src/middleware](./src/middleware) contains cache middleware code that enables reduced load on external APIs.
+- [src/routes](./src/routes) contains logic describing endpoints of the API.
+- [src/types](./src/types) contains custom TypeScript type definitions for the application data.
+- [src/utils](./src/utils) contains helper functions that provide parsing, calculating, sorting and other functionalities.
+
+## Scripts
+
+### Installation
+
+Execute `yarn` command to install required dependencies.
+
+### Execution
+
+Start the server by typing `yarn start` in the console.
